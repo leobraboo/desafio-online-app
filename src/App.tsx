@@ -1,11 +1,12 @@
 import React from "react"
+import { AppRoutes } from "./routes"
 
 export function App() {
 
   return (
-    <div className="App">
-      home page
-    </div>
+    <>
+      <AppRoutes />
+    </>
   )
 }
 
