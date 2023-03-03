@@ -1,7 +1,9 @@
-export function Home(){
-  return(
+import { Navbar } from "../components/NavBar";
+
+export function Home() {
+  return (
     <>
-    teste
+      <Navbar />
     </>
   )
 }
