@@ -6,9 +6,10 @@ display: flex;
 flex-direction: row;
 background: #DCDCDC;
 flex-wrap: wrap;
-justify-content: space-between;
+justify-content: center;
 align-items: center;
 padding: 5px;
+gap: 20px;
 
 @media (max-width: 768px) {
   flex-direction: row;

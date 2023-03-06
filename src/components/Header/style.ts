@@ -6,12 +6,10 @@ background: whitesmoke;
 border-radius: 3px;
 box-shadow: 1px 1px 3px black;
 display: flex;
-font-size: 23px;
-font-weight: bold;
 height: 60px;
 justify-content: space-between;
 margin-top: 30px;
-padding: 20px;
+padding: 10px;
 width: 35%;
 
 @media (max-width: 680px) {
@@ -21,5 +19,34 @@ width: 35%;
 @media (max-width: 530px) {
   font-size: 12px;
   height: 30px;
+  padding: 5px;
+}
+@media (max-width: 410px) {
+  padding: 0px;
+}
+`
+export const ContentHeader = styled.div`
+align-items: center;
+display: flex;
+font-size: 23px;
+font-weight: bold;
+height: 60px;
+justify-content: space-between;
+width: 100%;
+
+@media (max-width: 850px) {
+  font-size: 17px;
+}
+
+@media (max-width: 670px) {
+  font-size: 12px;
+  height: 30px;
+}
+
+@media (max-width: 460px) {
+  font-size: 10px;
+}
+@media (max-width: 410px) {
+  font-size: 9px;
 }
 `

@@ -1,22 +1,27 @@
-import { Button, Form } from 'react-bootstrap';
-import { Header } from './style';
+import { Spinner } from 'react-bootstrap';
+import { ContentHeader, Header } from './style';
 import { useContext } from 'react';
 import { GlobalContext } from '../../context/WeatherContext';
 
 export function CHeader() {
 
-  const { dataWeather } = useContext(GlobalContext) as { dataWeather: any };
+  const { dataWeather, loading } = useContext(GlobalContext) as { dataWeather: any, loading: string };
 
   return (
     <Header>
-      <img src={dataWeather.icon} />
-      { dataWeather.city ?  <p> {dataWeather.city} </p> : "-"  }
-      
-      {dataWeather.temperature ? <p> {dataWeather.temperature} ºC </p> : "-"}
+      {loading &&
+        <div style={{ width: "35%", height: "60px", position: "absolute", display: "flex", justifyContent: "center", alignItems: "center" }}>
+          <Spinner animation="border" style={{}} />
+        </div>
+      }
+      <ContentHeader>
+        <img src={dataWeather.icon} />
+        {dataWeather.city ? <p> {dataWeather.city} </p> : "-"}
 
-      {dataWeather.main ? <p>{dataWeather.main}</p> : "-" }
+        {dataWeather.temperature ? <p> {dataWeather.temperature} ºC </p> : "-"}
 
-
+        {dataWeather.main ? <p>{dataWeather.main}</p> : "-"}
+      </ContentHeader>
     </Header>
   )
 }

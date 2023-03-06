@@ -10,6 +10,9 @@ box-shadow: 1px 1px 10px black;
 @media (max-width: 400px) {
   width: 14rem;
 }
+@media (min-width: 1600px) {
+  width: 25rem;
+}
 `
 export const CardImg = styled.img`
 background: radial-gradient(circle, rgba(255,255,242,1) 34%, rgba(255,255,235,1) 35%, rgba(78,64,137,1) 74%);

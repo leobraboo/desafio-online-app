@@ -78,7 +78,6 @@ export function useWeather() {
     const pokemons = typeResponse.data.pokemon;
     const randomIndex = Math.floor(Math.random() * pokemons.length);
     const name = pokemons[randomIndex].pokemon.name;
-    console.log(idPoke);
     
     return name;
   }
@@ -99,7 +98,6 @@ export function useWeather() {
       setNamePoke(pokeRandom);
       setInfoPoke(infoPokeResponse.data.sprites.front_default);
       setIdPoke(infoPokeResponse.data.id);
-      console.log(infoPokeResponse.data.abilities[0].ability.name);
 
     } catch (error) {
       console.error(error);
