@@ -46,7 +46,7 @@ export function useWeather() {
   };
 
   const getCoorder = async () => {
-    const coordResponse = await apiOpenWeather.get(`/geo/1.0/direct?q=${dataWeather.city}&limit=1&appid=8ebfee51658e4df7b5ab27454d460709`);
+    const coordResponse = await apiOpenWeather.get(`/geo/1.0/direct?q=${dataWeather.city}&limit=1&appid=${import.meta.env.VITE_APIKEY}`);
     const { lat, lon } = coordResponse.data[0]
 
     setDataWeather({
@@ -58,7 +58,7 @@ export function useWeather() {
   }
 
   const getInfoCity = async (lat: string, lon: string) => {
-    const weatherResponse = await apiOpenWeather.get(`/data/2.5/weather?lat=${lat}&lon=${lon}&appid=8ebfee51658e4df7b5ab27454d460709&units=metric`);
+    const weatherResponse = await apiOpenWeather.get(`/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${import.meta.env.VITE_APIKEY}&units=metric`);
     const { main: { temp }, weather: [{ icon, main }] } = weatherResponse.data;
 
     handlePokemon(answerToPokemon(temp, main))

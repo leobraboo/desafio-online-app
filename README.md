@@ -9,9 +9,14 @@
 
 - Dentro do arquivo <b>.env</b> será necessário colocar o token que é fornecido para conexão com a api OpenWeather que fornece as informações climáticas.
 
-### Com o Docker
+### Com o Docker deve ser realizado o clone do projeto
 
 - docker-compose up
+
+- Esta sendo utilizado variáveis de ambiente no projeto, então é necessário que após rodar o comando acima,
+ você procure pelo arquivo <b>.env.sample</b> na pasta raiz do sistema, copie, cole e renomeie o arquivo para <b>.env</b>
+
+- Dentro do arquivo <b>.env</b> será necessário colocar o token que é fornecido para conexão com a api OpenWeather que fornece as informações climáticas.
 
 ### Modo de pesquisa
 
@@ -49,4 +54,3 @@ https://api.openweathermap.org
 - React JS
 - Typescript
 - Para consultar as dependencias instaladas consulte o arquivo package.json
-
