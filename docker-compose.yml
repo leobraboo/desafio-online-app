@@ -10,5 +10,5 @@ services:
     working_dir: /srv/react-docker
     command: >
       bash -c "
-        npm install &&
-        npm run dev --host"
+      npm install &&
+      npm run dev --host"
