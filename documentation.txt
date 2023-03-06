@@ -1,8 +1,8 @@
 .src/components : fica a estrutura inicial do componentes.
 
-.src/context : 
+.src/context : é usado para compartilhamento de informações extra componentes.
 
-.src/hooks : 
+.src/hooks : onde fica todos os estados e onde funciona a logica das requisições e tratamento de retornos das api's utilizadas
 
 .src/page :  onde é montado o componente total que vai para o APP, alem de receber o provider que é utilizado na context.
 

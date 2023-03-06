@@ -11,12 +11,12 @@
 
 ### Com o Docker
 
-- 
+- docker-compose up
 
 ### Modo de pesquisa
 
--Digitar a cidade desejada no campo de texto.
--Aguardar e conferir as informações climáticas da cidade e qual foi o pokemon escolhido.
+- Digitar a cidade desejada no campo de texto.
+- Aguardar e conferir as informações climáticas da cidade e qual foi o pokemon escolhido.
 
 ### Apis Utilizadas 
 
