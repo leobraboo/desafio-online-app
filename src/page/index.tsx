@@ -1,11 +1,14 @@
 import { GeneralHome } from "../components/Home";
 import { Navbar } from "../components/NavBar";
+import { GlobalProvider } from "../context/WeatherContext";
 
 export function Home() {
   return (
     <>
-      <Navbar />
-      <GeneralHome/>
+      <GlobalProvider>
+        <Navbar />
+        <GeneralHome />
+      </GlobalProvider>
     </>
   )
 }

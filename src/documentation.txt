@@ -1,0 +1,13 @@
+.src/components : fica a estrutura inicial do componentes.
+
+.src/context : 
+
+.src/hooks : 
+
+.src/page :  onde é montado o componente total que vai para o APP, alem de receber o provider que é utilizado na context.
+
+.src/routes : é utilizado o react-router-dom para gerenciamento de rotas , onde as propriedades Path e element direciona o usuario para as propriedades configuradas.
+
+.src/utils : Arquivo de configuração do axios , responsavel por fazer o create da requisição nas api's configuradas.
+ 
+.Para saber as dependencias instaladas consulte o arquivo package.json
