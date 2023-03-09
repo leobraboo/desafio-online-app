@@ -11,7 +11,8 @@ export function useWeather() {
     city: "",
     temperature: "",
     icon: "",
-    main: ""
+    main: "",
+    description: "",
   })
 
   const handleCity = (e: any) => {
@@ -58,8 +59,8 @@ export function useWeather() {
   }
 
   const getInfoCity = async (lat: string, lon: string) => {
-    const weatherResponse = await apiOpenWeather.get(`/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${import.meta.env.VITE_APIKEY}&units=metric`);
-    const { main: { temp }, weather: [{ icon, main }] } = weatherResponse.data;
+    const weatherResponse = await apiOpenWeather.get(`/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${import.meta.env.VITE_APIKEY}&units=metric&lang=pt_br`);
+    const { main: { temp }, weather: [{ icon, main, description }] } = weatherResponse.data;
 
     handlePokemon(answerToPokemon(temp, main))
 
@@ -67,7 +68,8 @@ export function useWeather() {
       ...dataWeather,
       temperature: temp,
       icon: `http://openweathermap.org/img/w/${icon}.png`,
-      main: main
+      main: main,
+      description: description
     })
 
   }

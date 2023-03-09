@@ -20,7 +20,7 @@ export function CHeader() {
 
         {dataWeather.temperature ? <p> {dataWeather.temperature} ºC </p> : "-"}
 
-        {dataWeather.main ? <p>{dataWeather.main}</p> : "-"}
+        {dataWeather.description ? <p>{dataWeather.description}</p> : "-"}
       </ContentHeader>
     </Header>
   )

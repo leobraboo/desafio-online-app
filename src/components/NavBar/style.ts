@@ -27,7 +27,9 @@ height: 50px;
 }
 `
 export const StackStyled = styled(Stack)`
-width: 600px;
+width: 60%;
+display: flex;
+justify-content: space-around;
 height: 50px;
 
 @media (max-width: 855px) {
