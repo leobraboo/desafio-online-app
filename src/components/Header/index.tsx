@@ -1,5 +1,5 @@
 import { Spinner } from 'react-bootstrap';
-import { ContentHeader, Header } from './style';
+import { ContainerHeader, ContentHeader, Header } from './style';
 import { useContext } from 'react';
 import { GlobalContext } from '../../context/WeatherContext';
 
@@ -14,14 +14,23 @@ export function CHeader() {
           <Spinner animation="border" style={{}} />
         </div>
       }
-      <ContentHeader>
-        <img src={dataWeather.icon} />
-        {dataWeather.city ? <p> {dataWeather.city} </p> : "-"}
+      <ContainerHeader>
+        <ContentHeader>
+          <img src={dataWeather.icon} />
+        </ContentHeader>
 
-        {dataWeather.temperature ? <p> {dataWeather.temperature} ºC </p> : "-"}
+        <ContentHeader>
+          {dataWeather.city ? <p> {dataWeather.city} </p> : "-"}
+        </ContentHeader>
 
-        {dataWeather.description ? <p>{dataWeather.description}</p> : "-"}
-      </ContentHeader>
+        <ContentHeader>
+          {dataWeather.temperature ? <p> {dataWeather.temperature} ºC </p> : "-"}
+        </ContentHeader>
+        
+        <ContentHeader>
+          {dataWeather.description ? <p>{dataWeather.description}</p> : "-"}
+        </ContentHeader>
+      </ContainerHeader>
     </Header>
   )
 }

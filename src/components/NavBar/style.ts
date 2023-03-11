@@ -13,6 +13,7 @@ gap: 20px;
 
 @media (max-width: 768px) {
   flex-direction: row;
+  gap: 5px;
 }
 `
 
